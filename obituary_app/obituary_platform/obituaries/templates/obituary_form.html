@@ -5,11 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Obituary</title>
     <style>
-        /* Add your CSS styles here */
+        body {
+            background-color:#e07d1f;
+        }
     </style>
     <script>
         function validateForm() {
-            // Add your JavaScript validation here
+            var name = document.getElementById('id_name').value;
+            var email = document.getElementById('id_email').value;
+            var dateOfDeath = document.getElementById('id_date_of_death').value;
+
+            if (name === "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+
+            if (dateOfDeath === "") {
+                alert("Date of death must be filled out");
+                return false;
+            }
             return true;
         }
     </script>
