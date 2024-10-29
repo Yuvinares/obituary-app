@@ -16,8 +16,6 @@ Welcome to the Obituary Platform, a web application that allows administrators t
 - **Language:** Python
 - **HTML/CSS** for front-end styling.
 
-## Installation
-
 ## Features
 
 - View obituaries
